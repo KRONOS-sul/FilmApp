@@ -1,6 +1,7 @@
 package kg.geektech.filmapp.ui.films;
 
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
@@ -9,11 +10,19 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 import java.util.List;
 
+import kg.geektech.filmapp.OnClick;
 import kg.geektech.filmapp.data.models.Film;
 import kg.geektech.filmapp.databinding.ItemFilmBinding;
 
 public class FilmsAdapter extends RecyclerView.Adapter<FilmsAdapter.FilmsViewHolder> {
     private List<Film> films = new ArrayList<>();
+
+    //ДЗ
+    private OnClick onClick;
+
+    public FilmsAdapter(OnClick onClick) {
+        this.onClick = onClick;
+    }
 
     public void setFilms(List<Film> films) {
         this.films = films;
@@ -48,6 +57,11 @@ public class FilmsAdapter extends RecyclerView.Adapter<FilmsAdapter.FilmsViewHol
         public void onBind(Film film) {
             binding.tvTitle.setText(film.getTitle());
             binding.tvDescription.setText(film.getDescription());
+
+            //ДЗ
+            itemView.setOnClickListener(view -> {
+                onClick.onClick(film);
+            });
         }
     }
 }

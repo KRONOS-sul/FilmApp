@@ -10,4 +10,9 @@
         android:name="kg.geektech.filmapp.ui.films.FilmsFragment"
         android:label="fragment_films"
         tools:layout="@layout/fragment_films" />
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="kg.geektech.filmapp.ui.films.DetailFragment"
+        android:label="fragment_detail"
+        tools:layout="@layout/fragment_detail" />
 </navigation>
