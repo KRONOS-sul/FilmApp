@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 
@@ -46,7 +47,6 @@ private FragmentDetailBinding binding;
                     binding.title.setText(film.getTitle());
                     binding.description.setText(film.getDescription());
                     binding.originalTitle.setText(film.getOriginal_title());
-                    binding.releaseDate.setText(film.getRelease_date());
                     binding.director.setText(film.getDirector());
                     Glide.with(requireActivity()).load(film.getImage()).into(binding.imageUrl);
                 }
@@ -54,7 +54,6 @@ private FragmentDetailBinding binding;
 
             @Override
             public void onFailure(Call<Film> call, Throwable t) {
-
             }
         });
     }

@@ -21,6 +21,16 @@
                 android:layout_height="260dp" />
 
             <TextView
+                android:id="@+id/original_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Orig Title"
+                android:textSize="28sp"
+                android:textColor="@color/red"
+                android:textAlignment="center"
+                android:textStyle="italic" />
+
+            <TextView
                 android:id="@+id/title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -30,22 +40,6 @@
                 android:textColor="@color/black"
                 android:textSize="28sp"
                 android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/original_title"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Orig Title"
-                android:textSize="24sp"
-                android:textStyle="italic" />
-
-            <TextView
-                android:id="@+id/release_date"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Release date"
-                android:textColor="@color/black"
-                android:textSize="24sp" />
 
             <TextView
                 android:id="@+id/director"
